@@ -2,13 +2,15 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/images" 
+media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
   - name: "projects"
     label: "Мои Работы"
     folder: "content/projects"
+    extension: "json"
+    format: "json"
     create: true
     slug: "{{slug}}"
     fields:
@@ -18,7 +20,7 @@ collections:
           name: "category", 
           widget: "select", 
           options: [
-            { label: "🎮 Проекты", value: "projects" },
+            { label: "🎮 Проекты", value: "games" },
             { label: "🎨 3D Модели", value: "models" },
             { label: "⚙️ Скрипты", value: "scripts" }
           ] 
