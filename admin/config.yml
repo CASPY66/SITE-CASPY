@@ -18,9 +18,9 @@ collections:
           name: "category", 
           widget: "select", 
           options: [
-            { label: "🎮 Игры & Проекты", value: "games" },
+            { label: "🎮 Проекты", value: "projects" },
             { label: "🎨 3D Модели", value: "models" },
-            { label: "⚙️ Скрипты & Тулы", value: "scripts" }
+            { label: "⚙️ Скрипты", value: "scripts" }
           ] 
         }
       - { label: "Тег / Стек", name: "tag", widget: "string", default: "C# / Unity / Godot / Blender" }
