@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images" 
+public_folder: "/assets/images"
+
+collections:
+  - name: "projects"
+    label: "Мои Работы"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок Проекта", name: "title", widget: "string" }
+      - { 
+          label: "Категория", 
+          name: "category", 
+          widget: "select", 
+          options: [
+            { label: "🎮 Игры & Проекты", value: "games" },
+            { label: "🎨 3D Модели", value: "models" },
+            { label: "⚙️ Скрипты & Тулы", value: "scripts" }
+          ] 
+        }
+      - { label: "Тег / Стек", name: "tag", widget: "string", default: "C# / Unity / Godot / Blender" }
+      - { label: "Превью (Картинка/Гифка)", name: "image", widget: "image" }
+      - { label: "Краткое Описание", name: "description", widget: "text" }
+      - { label: "Ссылка на проект/GitHub/ArtStation", name: "link", widget: "string", required: false }
